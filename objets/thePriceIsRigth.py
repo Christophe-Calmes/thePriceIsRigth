@@ -24,6 +24,7 @@ class ThePriceIsRigth:
             print(f"Cheaper !test {self.attempts} / {self.max_attempts}")
         elif status == 0:
             print(f"Win ! after {self.attempts} test")
+            self.is_game_over = True
         elif status == -1:
             print(f"Lost the game, the rigth price is {self.target_price} $")
     def inputPrice (self):
