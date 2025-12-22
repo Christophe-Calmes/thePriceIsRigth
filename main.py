@@ -1,6 +1,8 @@
 from objets.thePriceIsRigth import ThePriceIsRigth
+from objets.graphiqueInterface import GameInterface
 
-game = ThePriceIsRigth()
-print("--- Welcome to The Price Is Right ---")
-while not game.is_game_over:
-    game.inputPrice()
+# On ne crée plus l'objet logic ici, car GameInterface le crée lui-même dans son __init__
+app = GameInterface()
+
+# On lance la fenêtre
+app.mainloop()

@@ -19,14 +19,13 @@ class ThePriceIsRigth:
         return status
     def display_message(self, status):
         if status == 2:
-            print(f"More expensive ! test {self.attempts} / {self.max_attempts}")
+            return f"More expensive ! test {self.attempts} / {self.max_attempts}"
         elif status == 1:
-            print(f"Cheaper !test {self.attempts} / {self.max_attempts}")
+            return f"Cheaper ! test {self.attempts} / {self.max_attempts}"
         elif status == 0:
-            print(f"Win ! after {self.attempts} test")
-            self.is_game_over = True
+            return f"Win ! after {self.attempts} test"
         elif status == -1:
-            print(f"Lost the game, the rigth price is {self.target_price} $")
+            return f"Lost the game, the rigth price is {self.target_price} $"
     def inputPrice (self):
         if not self.is_game_over: 
             price = input("What is your price?")
